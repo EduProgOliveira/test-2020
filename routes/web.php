@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('courses','Courses\\CoursesController');
+Route::resource('cursos','Courses\\CoursesController')->names('course')->parameters(['cursos' => 'course']);
 
-Route::resource('students','Students\\StudentsController');
+Route::resource('alunos','Students\\StudentsController')->names('student')->parameters(['alunos' => 'student']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
