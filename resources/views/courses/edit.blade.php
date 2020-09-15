@@ -11,24 +11,23 @@
                 </ul>
             </div>
         @endif
-        <h2>{{ $student->name }}</h2>
+        <h2>{{ $course->name }}</h2>
         <div class="row">
             <div class="col-md-5">
-                <form method="post" action="{{ route('student.update',['student' => $student]) }}">
+                <form method="post" action="{{ route('course.update',['course' => $course]) }}">
                     @csrf
                     @method('put')
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="">Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome do Aluno" value="{{ $student->name != null ? $student->name : ''}}" name="name">
+                            <label for="">Titulo</label>
+                            <input type="text" class="form-control" placeholder="Nome do Aluno" value="{{ $course->title }}" name="title">
                         </div>
                         <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" placeholder="Email do Aluno" value="{{ $student->email != null ? $student->email : ''}}" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Data Nascimento</label>
-                            <input type="date" class="form-control" placeholder="Data Nascimento do Aluno" value="{{ date('Y-m-d',strtotime($student->birth_date)) }}" name="birth_date">
+                            <div class="form-group">
+                                <textarea name="description" id="" cols="30" rows="10" placeholder="Descrição do Curso">
+                                    {{ $course->description }}
+                                </textarea>
+                            </div>
                         </div>
                     </div>
                     <button class="btn btn-block btn-primary" type="submit">

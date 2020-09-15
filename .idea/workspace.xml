@@ -20,31 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="295aed3d-7a50-479b-9fc9-a43b5ef036f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Course.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Courses/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Courses/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/StudentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/courses/coursesList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courses/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/studentEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/studentShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/studentsList.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/StudentsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Students.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/courses/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/courses/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/adminlte/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +190,10 @@
       <updated>1600091806619</updated>
       <workItem from="1600091807739" duration="4578000" />
       <workItem from="1600099091671" duration="11414000" />
+      <workItem from="1600124461937" duration="6843000" />
+      <workItem from="1600133214754" duration="5607000" />
+      <workItem from="1600177647210" duration="114000" />
+      <workItem from="1600177889742" duration="23777000" />
     </task>
     <servers />
   </component>
@@ -219,9 +213,29 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="523" y="244" width="374" height="454" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600133891099">
+      <screen x="0" y="27" width="1440" height="873" />
+    </state>
+    <state x="523" y="244" width="374" height="454" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1440.873@0.27.1440.873" timestamp="1600133891099" />
+    <state x="453" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600199124803">
+      <screen x="0" y="27" width="1440" height="873" />
+    </state>
+    <state x="453" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1440.873@0.27.1440.873" timestamp="1600199124803" />
+    <state x="434" y="183" width="769" height="568" key="NewPhpClassDialog" timestamp="1600185087303">
+      <screen x="0" y="27" width="1440" height="873" />
+    </state>
+    <state x="434" y="183" width="769" height="568" key="NewPhpClassDialog/0.27.1440.873@0.27.1440.873" timestamp="1600185087303" />
+    <state x="515" y="389" width="399" height="156" key="NewPhpFileDialog" timestamp="1600198733144">
+      <screen x="0" y="27" width="1440" height="873" />
+    </state>
+    <state x="515" y="389" width="399" height="156" key="NewPhpFileDialog/0.27.1440.873@0.27.1440.873" timestamp="1600198733144" />
     <state x="209" y="98" key="SettingsEditor" timestamp="1600091871463">
       <screen x="0" y="27" width="1440" height="873" />
     </state>
     <state x="209" y="98" key="SettingsEditor/0.27.1440.873@0.27.1440.873" timestamp="1600091871463" />
+    <state x="501" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600203748926">
+      <screen x="0" y="27" width="1440" height="873" />
+    </state>
+    <state x="501" y="378" width="438" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1440.873@0.27.1440.873" timestamp="1600203748926" />
   </component>
 </project>

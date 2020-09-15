@@ -19,7 +19,12 @@ Route::get('/', function () {
 
 Route::resource('cursos','Courses\\CoursesController')->names('course')->parameters(['cursos' => 'course']);
 
-Route::resource('alunos','Students\\StudentsController')->names('student')->parameters(['alunos' => 'student']);
+Route::resource('alunos','Student\\StudentsController')->names('student')->parameters(['alunos' => 'student']);
+
+Route::get('delete-student/{student}','Student\\StudentsController@destroy')->name('deletestudent');
+Route::get('delete-course/{course}','Courses\\CoursesController@destroy')->name('deletecourse');
+
+Route::get('register-courses/{student}','Courses\\CoursesController@destroy')->name('registercourse');
 
 Auth::routes();
 
