@@ -24,7 +24,8 @@ Route::resource('alunos','Student\\StudentsController')->names('student')->param
 Route::get('delete-student/{student}','Student\\StudentsController@destroy')->name('deletestudent');
 Route::get('delete-course/{course}','Courses\\CoursesController@destroy')->name('deletecourse');
 
-Route::get('register-courses/{student}','Courses\\CoursesController@destroy')->name('registercourse');
+Route::get('register-courses/{student}','Student\\StudentsController@registerCourse')->name('registercourse');
+Route::get('delete-course-from-student/{student}','Student\\StudentsController@deleteCourseFromStudent')->name('registercoursefromstudent');
 
 Auth::routes();
 

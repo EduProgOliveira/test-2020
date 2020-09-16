@@ -70,8 +70,6 @@ class StudentsController extends Controller
             return;
         }
 
-
-
     }
 
 
@@ -120,5 +118,28 @@ class StudentsController extends Controller
     {
         $student->delete();
         return redirect()->route('student.index');
+    }
+
+    public function deleteCourseFromStudent(Request $request,Student $student)
+    {
+       
+        //$student = Student::where('id','=',$request->student)->first();
+
+        if($student->courses('id','=',$request->course)->delete()){
+            $register['success'] = true;
+            $register['message'] = 'OK';
+            echo json_encode($register);
+            return;
+        }else{
+            $register['success'] = false;
+            $register['message'] = 'ERRO';
+            echo json_encode($register);
+            return;
+        }
+
+
+        //return redirect()->route('student.show',['student' => $student]);
+        //$student->courses('');
+        //return redirect()->route('student.index');
     }
 }

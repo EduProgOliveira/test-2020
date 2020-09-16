@@ -25,7 +25,7 @@
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-body table-responsive table-bordered">
-                        <table class="table table-hover">
+                       <table class="table table-hover">
                             <tbody>
                             <tr>
                                 <th>Nome</th>
@@ -59,7 +59,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @endforeach 
                             </tbody>
                         </table>
                     </div>

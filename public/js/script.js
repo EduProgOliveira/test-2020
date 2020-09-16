@@ -9,6 +9,7 @@ function register(student){
             if(response.success === true){
                 window.location.href = "/alunos/"+ student;
             }else{
+                alert('no');
                 $('.messageBox').removeClass('d-none').html(response.message);
             }
         }
@@ -24,6 +25,7 @@ function studentDelete(student){
         success: function (response){
             if(response.success === true){
                 window.location.href = "/alunos/"+ student;
+                document.location.reload(true);
             }else{
                 $('.messageBox').removeClass('d-none').html(response.message);
             }
@@ -40,6 +42,23 @@ function courseDelete(course){
         success: function (response){
             if(response.success === true){
                 window.location.href = "/cursos/"+ course;
+                document.location.reload(true);
+            }else{
+                $('.messageBox').removeClass('d-none').html(response.message);
+            }
+        }
+    });
+}
+
+function courseDeleteFromStudent(student,course){
+    $.ajax({
+        url: "/delete-course-from-student/" + student,
+        type: "get",
+        data: {course: course, student: student},
+        dataType: 'json',
+        success: function (response){
+            if(response.success === true){
+                window.location.href = "/alunos/"+ student;
                 document.location.reload(true);
             }else{
                 $('.messageBox').removeClass('d-none').html(response.message);

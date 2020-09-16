@@ -43,15 +43,17 @@
                         <td>
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <a href="{{ route('student.show',['student' => $register->id]) }}"class="btn btn-app">
+                                    <a href="{{ route('course.show',['course' => $register->id]) }}"class="btn btn-app">
                                         <i class="fa fa-eye"></i>
                                     </a>
                                 </div>
-                                <div class="col-sm-3">
-                                    <a href="{{ route('student.destroy',['student' => $register->id]) }}"class="btn btn-app">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </div>
+                                <button class="btn btn-app" type="button" onclick="courseDeleteFromStudent({{ $student->id, $register->id }})">
+                                    <i class="fa fa-trash"></i>
+                                    <form name="form_delete_student">
+                                        @csrf
+                                        <input type="hidden" name="student" id="delete_student" value="{{ $student->id }}">
+                                    </form>
+                                </button>
                             </div>
                         </td>
                     </tr>
